@@ -20,7 +20,7 @@ for (j in 1:d) {
   for (i in 1:m) {
     r.int <- r.int + r[i] * dt
     dW1 <- sqrt(dt) * rnorm(1)
-    dW2 <- sqrt( dt) * rnorm(1)
+    dW2 <- sqrt(dt) * rnorm(1)
     ds <- r[i] * s[i] * dt + GOOG.vol * s[i] * dW1
     dr <- k * (theta - r[i]) * dt + beta * dW2
     s[i + 1] <- s[i] + ds
